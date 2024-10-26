@@ -245,15 +245,18 @@ const Chat = ({
       })
       return [...prevMessages.slice(0, -1), updatedLastMessage];
     });
-    
+
   }
 
   return (
     <div className={styles.chatContainer}>
       <div className={styles.messages}>
-        {messages.map((msg, index) => (
-          <Message key={index} role={msg.role} text={msg.text} />
-        ))}
+        {messages.map((msg, index) => {
+
+          return (
+              <Message key={index} role={msg.role} text={msg.text}/>
+          );
+        })}
         <div ref={messagesEndRef} />
       </div>
       <form
