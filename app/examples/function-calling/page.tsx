@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import styles from "../shared/page.module.css";
 import Chat from "../../components/chat";
-import { getWeather } from "../../utils/weather";
 import { getDoctors } from "../../utils/doctors";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
 
@@ -15,12 +14,6 @@ const FunctionCalling = () => {
     if(call.function.name  === "get_doctors") {
       const data = getDoctors();
       setDoctorsData(data);
-      return JSON.stringify(data);
-    }
-
-    if (call.function.name === "get_weather") {
-      const args = JSON.parse(call.function.arguments);
-      const data = getWeather(args.location);
       return JSON.stringify(data);
     }
   };
