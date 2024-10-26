@@ -5,8 +5,7 @@ import styles from "./page.module.css";
 
 const Home = () => {
   const categories = {
-    "Function calling": "function-calling",
-    All: "all",
+    "Book a doctor": "scout",
   };
 
   return (
@@ -16,7 +15,7 @@ const Home = () => {
       </div>
       <div className={styles.container}>
         {Object.entries(categories).map(([name, url]) => (
-          <a key={name} className={styles.category} href={`/examples/${url}`}>
+          <a key={name} className={styles.category} href={`/health/${url}`}>
             {name}
           </a>
         ))}
