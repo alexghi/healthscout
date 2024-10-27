@@ -6,6 +6,7 @@ import Chat from "../components/chat";
 import { getWeather } from "../utils/weather";
 import { getDoctors } from "../utils/doctors";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
+import { submitAppointemnt } from "../utils/appointments";
 
 interface WeatherData {
   location?: string;
@@ -16,6 +17,7 @@ interface WeatherData {
 const MedicalConsultation = () => {
   const [weatherData, setWeatherData] = useState<WeatherData>({});
   const [doctorsData, setDoctorsData] = useState([]);
+  const [appointments, setAppointments] = useState([]);
 
   const functionCallHandler = async (call: RequiredActionFunctionToolCall) => {
     // if (call?.function?.name !== "get_weather") return;
@@ -30,6 +32,11 @@ const MedicalConsultation = () => {
       const args = JSON.parse(call.function.arguments);
       const data = getWeather(args.location);
       setWeatherData(data);
+      return JSON.stringify(data);
+    }
+
+    if(call.function.name  === "appointment_submitter") {
+      const data = submitAppointemnt();
       return JSON.stringify(data);
     }
   };
