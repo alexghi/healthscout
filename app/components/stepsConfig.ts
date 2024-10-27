@@ -6,10 +6,6 @@ export interface Step {
 
   export const stepsConfig: Step[] = [
     {
-      label: 'General Info',
-      path: '/general-info',
-    },
-    {
       label: 'Medical Consultation',
       path: '/medical-consultation',
     },

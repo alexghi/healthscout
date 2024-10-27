@@ -323,7 +323,6 @@ const Chat = ({
             className={styles.input}
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Type your symptoms here"
           />
           <button type="button" className={styles.microphoneButton}>
             <IconMic />

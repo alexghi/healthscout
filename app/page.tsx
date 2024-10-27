@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-3 items-center">
             <Link
-              href="/general-info"
+              href="/medical-consultation"
               className={styles["hero-button"]}
             >
               <IconChat width={16} height={16} fill="#15112B" /> Speak to a
