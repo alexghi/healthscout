@@ -15,6 +15,7 @@ import IconSquares from "../assets/icons/IconSquares";
 const Navbar: React.FC = () => {
   const pathname = usePathname();
 
+  const isHomepage = pathname === "/";
   const isProcessPage = stepsConfig.some(
     (step: Step) => step.path === pathname
   );
@@ -24,7 +25,7 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isHomepage ? styles.homeNavbar : ''}`}>
       <div className={styles.logoContainer}>
         <Link href="/">
           <Logo />

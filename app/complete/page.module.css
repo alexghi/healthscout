@@ -1,15 +1,75 @@
 .main {
-  @apply flex justify-center items-center h-screen;
+  @apply flex justify-center items-center min-h-screen;
 }
 
 .container {
-  @apply flex w-full h-screen pt-36 items-center justify-center;
+  @apply  min-h-screen pt-36;
 }
 
 .card {
-  @apply rounded-lg shadow-lg text-white flex flex-col md:flex-row w-3/4 p-8;
+  @apply flex flex-col xl:flex-row text-white w-5/6 lg:w-3/4 gap-10 mx-auto;
 }
 
 .profile {
-  @apply flex;
+  @apply flex flex-col lg:flex-row rounded-2xl border-2 border-white overflow-hidden;
+}
+
+.image {
+  @apply lg:w-1/3 object-cover;
+}
+
+.details {
+  @apply lg:w-2/3 p-6 relative space-y-12;
+}
+
+.name {
+  @apply font-semibold text-[23px] leading-[32px] text-white;
+}
+
+.description {
+  @apply font-normal text-xl;
+}
+
+.specialty {
+  @apply mt-[10px] font-medium text-[17px] leading-[21px];
+}
+
+.medicCard {
+  @apply space-y-12 xl:w-3/5;
+}
+
+.rating {
+  @apply flex gap-[10px] mt-2 lg:absolute top-2 right-4;
+}
+
+.title {
+  @apply font-bold text-[32px] leading-[46px];
+}
+
+.content {
+  @apply xl:w-2/5;
+}
+
+.info {
+  @apply space-y-9;
+}
+
+.infoText {
+  @apply font-bold text-lg text-[#D7E4D8];
+}
+
+.appointmentDetails {
+  @apply text-lg font-normal text-[#D7E4D8];
+}
+
+.buttons {
+  @apply flex space-x-3;
+}
+
+.dashboardButton {
+  @apply bg-white rounded-full px-4 py-[14px] text-[#15112B] font-bold text-[17px] leading-[23px] flex gap-[14px] items-center h-[50px] w-1/2 justify-center;
+}
+
+.calendarButton {
+  @apply bg-[#FF5733] rounded-full px-4 py-[14px] text-white font-bold text-[17px] leading-[23px] flex gap-[14px] items-center h-[50px] w-1/2 justify-center;
 }
