@@ -2,7 +2,6 @@ import { openai } from "@/app/openai";
 
 export const runtime = "nodejs";
 
-// Create a new assistant
 export async function POST() {
   const assistant = await openai.beta.assistants.create({
     instructions:
@@ -15,20 +14,6 @@ export async function POST() {
         function: {
           name: "get_doctors",
           description: "Get doctors list",
-          // parameters: {
-          //   type: "object",
-          //   properties: {
-          //     location: {
-          //       type: "string",
-          //       description: "The city and state e.g. San Francisco, CA",
-          //     },
-          //     unit: {
-          //       type: "string",
-          //       enum: ["c", "f"],
-          //     },
-          //   },
-          //   required: ["location"],
-          // },
         },
       },
       {

@@ -6,14 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="1ac27d44-d93b-401a-b9f1-706bc15b7cd0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/assistants/files/route.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/files/[fileId]/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/file-viewer.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/file-viewer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/examples/basic-chat/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/examples/basic-chat/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/examples/file-search/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/assistants/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/assistants/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assistant-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/assistant-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/weather-widget.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/weather-widget.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/medical-consultation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/medical-consultation/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/weather.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     "Node.js.route.js.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/alex/Projects/healthscout",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
