@@ -1,5 +1,9 @@
 .navbar {
-  @apply flex justify-between items-center w-full px-7 md:px-14 lg:px-28 py-3 mt-6 absolute z-10;
+  @apply flex justify-between items-center w-full px-7 md:px-14 lg:px-28 py-9 pb-3 absolute z-10 bg-[#0F172A];
+}
+
+.homeNavbar {
+  @apply bg-transparent !important;
 }
 
 .logoContainer {
