@@ -7,6 +7,13 @@ import Markdown from "react-markdown";
 // @ts-expect-error - no types for this yet
 import { AssistantStreamEvent } from "openai/resources/beta/assistants/assistants";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
+import IconFile from "../assets/icons/IconFile";
+import IconMic from "../assets/icons/IconMic";
+import IconSend from "../assets/icons/IconSend";
+import IconFlag from "../assets/icons/IconFlag";
+import IconCopy from "../assets/icons/IconCopy";
+import IconAI from "../assets/icons/IconAI";
+import avatar from "../assets/avatar-placeholder.png";
 
 type MessageProps = {
   role: "user" | "assistant" | "code";
@@ -142,7 +149,7 @@ const Chat = ({
   const handleTextDelta = (delta) => {
     if (delta.value != null) {
       appendToLastMessage(delta.value);
-    };
+    }
     if (delta.annotations != null) {
       annotateLastMessage(delta.annotations);
     }
@@ -151,7 +158,7 @@ const Chat = ({
   // imageFileDone - show image in chat
   const handleImageFileDone = (image) => {
     appendToLastMessage(`\n![${image.file_id}](/api/files/${image.file_id})\n`);
-  }
+  };
 
   // toolCallCreated - log new tool call
   const toolCallCreated = (toolCall) => {
@@ -236,44 +243,99 @@ const Chat = ({
         ...lastMessage,
       };
       annotations.forEach((annotation) => {
-        if (annotation.type === 'file_path') {
+        if (annotation.type === "file_path") {
           updatedLastMessage.text = updatedLastMessage.text.replaceAll(
             annotation.text,
             `/api/files/${annotation.file_path.file_id}`
           );
         }
-      })
+      });
       return [...prevMessages.slice(0, -1), updatedLastMessage];
     });
-    
-  }
+  };
 
   return (
     <div className={styles.chatContainer}>
       <div className={styles.messages}>
-        {messages.map((msg, index) => (
-          <Message key={index} role={msg.role} text={msg.text} />
-        ))}
+        {messages.map((msg, index) => {
+          const isUser = msg.role === "user";
+          const isAssistant = msg.role === "assistant";
+
+          return (
+            <div
+              key={index}
+              className={
+                isUser
+                  ? styles.userMessageWrapper
+                  : styles.assistantMessageWrapper
+              }
+            >
+              {isAssistant && (
+                <div className={styles.assistantImage}>
+                  <IconAI />
+                </div>
+              )}
+
+              <div
+                className={
+                  isUser ? styles.userMessage : styles.assistantMessage
+                }
+              >
+                {isAssistant && (
+                  <>
+                    <div className={styles.assistantName}>
+                      HealthScout | AI Medic
+                    </div>
+                    <div className={styles.assistantText}>{msg.text}</div>
+                    <div className={styles.assistantActions}>
+                      <button className={styles.reportButton}>
+                        <IconFlag />
+                      </button>
+                      <button className={styles.copyButton}>
+                        <IconCopy />
+                      </button>
+                    </div>
+                  </>
+                )}
+
+                {isUser && msg.text}
+              </div>
+
+              {isUser && (
+                <img
+                  src={avatar.src}
+                  alt="User Avatar"
+                  className={styles.userAvatar}
+                />
+              )}
+            </div>
+          );
+        })}
         <div ref={messagesEndRef} />
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className={`${styles.inputForm} ${styles.clearfix}`}
-      >
-        <input
-          type="text"
-          className={styles.input}
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Enter your question"
-        />
-        <button
-          type="submit"
-          className={styles.button}
-          disabled={inputDisabled}
-        >
-          Send
-        </button>
+      <form onSubmit={handleSubmit} className={styles.inputForm}>
+        <div className={styles.inputContainer}>
+          <button type="button" className={styles.fileButton}>
+            <IconFile />
+          </button>
+          <input
+            type="text"
+            className={styles.input}
+            value={userInput}
+            onChange={(e) => setUserInput(e.target.value)}
+            placeholder="Type your symptoms here"
+          />
+          <button type="button" className={styles.microphoneButton}>
+            <IconMic />
+          </button>
+          <button
+            type="submit"
+            className={styles.sendButton}
+            disabled={inputDisabled}
+          >
+            <IconSend />
+          </button>
+        </div>
       </form>
     </div>
   );

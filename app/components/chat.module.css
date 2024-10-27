@@ -1,96 +1,74 @@
 .chatContainer {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 100%;
-  width: 100%;
-}
-
-.inputForm {
-  display: flex;
-  width: 100%;
-  padding: 10px;
-  padding-bottom: 40px;
-  order: 1;
-}
-
-.input {
-  flex-grow: 1;
-  padding: 16px 24px;
-  margin-right: 10px;
-  border-radius: 60px;
-  border: 2px solid transparent;
-  font-size: 1em;
-  background-color: #efefef;
-}
-
-.input:focus {
-  outline: none !important;
-  border-color: #000;
-  background-color: white;
-}
-
-.button {
-  padding: 8px 24px;
-  background-color: #000;
-  color: white;
-  border: none;
-  font-size: 1em;
-  border-radius: 60px; /* Removed duplicate border-radius property */
-}
-
-.button:disabled {
-  background-color: lightgrey;
+  @apply flex flex-col-reverse h-full w-full;
 }
 
 .messages {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  order: 2;
-  white-space: pre-wrap;
+  @apply flex-grow overflow-auto p-[10px] flex flex-col order-2 whitespace-pre-wrap gap-4;
+}
+
+.inputForm {
+  @apply w-full p-[10px] pb-10 order-1 relative;
+}
+
+.inputContainer {
+  @apply flex items-center w-full rounded-full px-6 gap-3 border border-[#FFFFFF1A];
+}
+
+.input {
+  @apply flex-grow text-white placeholder:text-white bg-transparent outline-none font-normal text-[15px] leading-5 h-[66px];
+}
+
+.sendButton {
+  @apply bg-[#FF5733] flex items-center justify-center rounded-full w-8 h-8;
+}
+
+.userMessageWrapper,
+.assistantMessageWrapper {
+  @apply flex items-end gap-4;
+}
+
+.userMessageWrapper {
+  @apply justify-end;
+}
+
+.assistantMessageWrapper {
+  @apply items-start;
 }
 
 .userMessage,
-.assistantMessage,
-.codeMessage {
-  margin: 8px 0;
-  padding: 8px 16px;
-  align-self: flex-start;
-  border-radius: 15px;
-  max-width: 80%;
-  overflow-wrap: break-word;
-}
-
-.assistantMessage img {
-  max-width: 100%;
-  margin: 8px 0px 8px 0px;
-  border-radius: 8px;
+.assistantMessage {
+  @apply max-w-[80%] rounded-2xl;
 }
 
 .userMessage {
-  align-self: flex-end;
-  color: #fff;
-  background-color: #000;
+  @apply bg-[#FF5733] text-white rounded-ee-none self-end px-4 py-3;
 }
 
 .assistantMessage {
-  background-color: #efefef;
+  @apply flex flex-col text-[#D7E4D8] self-start rounded-es-none gap-4;
 }
 
-.codeMessage {
-  padding: 10px 16px;
-  background-color: #e9e9e9;
-  font-family: monospace;
-  counter-reset: line;
+.assistantImage {
+  @apply flex items-center justify-center rounded-full w-8 h-8 bg-[#2D4356] border border-[#91B69233];
 }
 
-.codeMessage > div {
-  margin-top: 4px;
+.assistantIcon {
+  @apply w-8 h-8 rounded-full;
 }
 
-.codeMessage span {
-  color: #b8b8b8;
-  margin-right: 8px;
+.assistantName {
+  @apply text-xs text-[#FFFFFF80];
+}
+
+.userAvatar {
+  @apply w-8 h-8 rounded-full ml-2;
+}
+
+.assistantActions {
+  @apply flex items-center gap-4;
+}
+
+.reportButton,
+.copyButton {
+  @apply text-gray-400;
 }
