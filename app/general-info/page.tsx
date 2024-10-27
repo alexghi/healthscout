@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 
-const FunctionCalling = () => {
+const GeneralInfo = () => {
   return (
     <main className={styles.main}>
         <Link href="/medical-consultation" className={styles.next}>
@@ -14,4 +14,4 @@ const FunctionCalling = () => {
   );
 };
 
-export default FunctionCalling;
+export default GeneralInfo;

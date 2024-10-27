@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./page.module.css";
 
-const FunctionCalling = () => {
+const Dashboard = () => {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -13,4 +13,4 @@ const FunctionCalling = () => {
   );
 };
 
-export default FunctionCalling;
+export default Dashboard;

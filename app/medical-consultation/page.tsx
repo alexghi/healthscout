@@ -13,7 +13,7 @@ interface WeatherData {
   conditions?: string;
 }
 
-const FunctionCalling = () => {
+const MedicalConsultation = () => {
   const [weatherData, setWeatherData] = useState<WeatherData>({});
   const [doctorsData, setDoctorsData] = useState([]);
 
@@ -47,4 +47,4 @@ const FunctionCalling = () => {
   );
 };
 
-export default FunctionCalling;
+export default MedicalConsultation;
