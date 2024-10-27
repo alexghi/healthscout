@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 import hero from "./assets/hero.png";
 import IconChat from "./assets/icons/IconChat";
+import Link from "next/link";
 
 const Home: React.FC = () => {
   return (
@@ -24,10 +25,13 @@ const Home: React.FC = () => {
             conditions simple and stress-free.
           </p>
           <div className="flex flex-col md:flex-row justify-center gap-3 items-center">
-            <button className={styles["hero-button"]}>
+            <Link
+              href="/general-info"
+              className={styles["hero-button"]}
+            >
               <IconChat width={16} height={16} fill="#15112B" /> Speak to a
               Doctor Now
-            </button>
+            </Link>
             <button className={styles["hero-button-outline"]}>
               Learn More
             </button>

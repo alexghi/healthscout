@@ -11,7 +11,7 @@ export interface Step {
     },
     {
       label: 'Medical Consultation',
-      path: '/examples/function-calling',
+      path: '/medical-consultation',
     },
     {
       label: 'Complete',

@@ -1,0 +1,8 @@
+.main {
+  @apply flex justify-center items-center h-screen;
+}
+
+.next {
+  @apply flex text-white rounded-full bg-[#FA2C00] w-[120px] h-[48px] items-center justify-center;
+
+}

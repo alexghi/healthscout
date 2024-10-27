@@ -44,20 +44,16 @@ const Navbar: React.FC = () => {
                     : styles.stepBadgeIncomplete
                 }`}
               >
-                <span>
-                  {index < currentStepIndex ? (
-                    <span className={styles.iconCheckmark}>
-                      <IconCheckmark />
-                    </span>
-                  ) : index === currentStepIndex ? (
-                    <span className={styles.iconCurrentStep}>{index + 1}</span>
-                  ) : (
-                    <span className={styles.iconIncompleteStep}>
-                      {index + 1}
-                    </span>
-                  )}
-                </span>
-                <span className="ml-2">{step.label}</span>
+                {index < currentStepIndex ? (
+                  <span className={styles.iconCheckmark}>
+                    <IconCheckmark />
+                  </span>
+                ) : index === currentStepIndex ? (
+                  <span className={styles.iconCurrentStep}>{index + 1}</span>
+                ) : (
+                  <span className={styles.iconIncompleteStep}>{index + 1}</span>
+                )}
+                <span className={styles.pathName}>{step.label}</span>
               </div>
               {index < stepsConfig.length - 1 &&
                 (index < currentStepIndex ? (
@@ -70,7 +66,7 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
-      <div className={styles.stepsContainer}>
+      <div className={styles.profileContainer}>
         <button>
           <IconSquares />
         </button>

@@ -2,10 +2,9 @@
 
 import React, { useState } from "react";
 import styles from "../shared/page.module.css";
-import Chat from "../../components/chat";
-import WeatherWidget from "../../components/weather-widget";
-import { getWeather } from "../../utils/weather";
-import { getDoctors } from "../../utils/doctors";
+import Chat from "../components/chat";
+import { getWeather } from "../utils/weather";
+import { getDoctors } from "../utils/doctors";
 import { RequiredActionFunctionToolCall } from "openai/resources/beta/threads/runs/runs";
 
 interface WeatherData {

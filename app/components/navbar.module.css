@@ -6,8 +6,16 @@
   @apply flex items-center;
 }
 
-.stepsContainer {
+.profileContainer {
   @apply flex items-center space-x-4;
+}
+
+.stepsContainer {
+  @apply hidden md:flex items-center space-x-4;
+}
+
+.pathName {
+  @apply hidden lg:block ml-2;
 }
 
 .stepItem {
@@ -15,7 +23,7 @@
 }
 
 .stepBadge {
-  @apply flex items-center ps-1 pe-3 py-1 rounded-full text-xs font-bold;
+  @apply flex items-center px-1  lg:pe-3 py-1 rounded-full text-xs font-bold;
 }
 
 .stepBadgeCompleted {
