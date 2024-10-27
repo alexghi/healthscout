@@ -1,0 +1,47 @@
+.navbar {
+  @apply flex justify-between items-center w-full px-7 md:px-14 lg:px-28 py-3 mt-6 absolute z-10;
+}
+
+.logoContainer {
+  @apply flex items-center;
+}
+
+.stepsContainer {
+  @apply flex items-center space-x-4;
+}
+
+.stepItem {
+  @apply flex items-center space-x-2;
+}
+
+.stepBadge {
+  @apply flex items-center ps-1 pe-3 py-1 rounded-full text-xs font-bold;
+}
+
+.stepBadgeCompleted {
+  @apply bg-[#D1FAE5] text-[#10B981];
+}
+
+.stepBadgeCurrent {
+  @apply bg-[#DBEAFE] text-[#334155];
+}
+
+.stepBadgeIncomplete {
+  @apply bg-[#F8FAFC] text-[#64748B];
+}
+
+.iconCheckmark {
+  @apply flex items-center justify-center w-5 h-5 rounded-full bg-[#10B981];
+}
+
+.iconCurrentStep {
+  @apply flex items-center justify-center w-5 h-5 rounded-full bg-[#3B82F6] text-white;
+}
+
+.iconIncompleteStep {
+  @apply flex items-center justify-center w-5 h-5 rounded-full bg-white text-[#94A3B8] border border-[#E2E8F0];
+}
+
+.avatarContainer {
+  @apply w-10 h-10 rounded-full overflow-hidden;
+}

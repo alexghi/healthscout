@@ -1,42 +1,60 @@
 .main {
-  @apply flex flex-col justify-center items-center h-screen;
-}
-.title {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  font-weight: 600;
+  @apply flex flex-col justify-start items-center min-h-screen w-full overflow-y-auto;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
+.hero {
+  @apply relative w-full flex justify-center pt-44 pb-12 max-h-[700px] px-[10%] md:px-[15%] lg:px-[18%] xl:px-[25%];
+  background: linear-gradient(107.44deg, rgba(12, 9, 86, 0.9) 1.56%, rgba(254, 137, 60, 0.9) 107.85%);
 }
 
-.category {
-  color: black;
-  display: flex;
-  font-size: 1em;
-  border-radius: 32px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #efefef;
-  cursor: pointer;
-  max-width: 800px;
-  width: 120px;
-  height: 120px;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-  font-weight: 500;
+.hero-image {
+  @apply absolute inset-0 object-cover w-full h-full opacity-10;
 }
 
-.category:hover {
-  background-color: #e3e3eb;
+.hero-content {
+  @apply relative text-center text-white px-4 flex flex-col gap-2 sm:gap-4 md:gap-6 lg:gap-8;
+}
+
+.hero-title {
+  @apply text-4xl md:text-5xl lg:text-6xl lg:leading-[75px] font-bold;
+}
+
+.hero-text {
+  @apply text-base sm:text-lg md:text-xl lg:text-2xl mb-6;
+}
+
+.hero-button {
+  @apply bg-white rounded-full px-4 py-[14px] text-[#15112B] font-bold text-[17px] leading-[23px] flex gap-[14px] items-center h-[50px] w-[280px] justify-center;
+}
+
+.hero-button-outline {
+  @apply flex bg-transparent border-[3px] border-[#FFFFFF66] text-white text-[17px] leading-[23px] px-4 py-[14px] rounded-full w-[160px] h-[50px] items-center justify-center;
+}
+
+.step-section {
+  @apply py-12 md:py-14 lg:py-20 bg-white flex-grow w-full;
+}
+
+.step-section-title {
+  @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-center mb-12 text-[#15112B];
+}
+
+.step-container {
+  @apply mx-auto w-full md:w-4/5 lg:w-2/3 xl:w-1/2 flex flex-col md:flex-row justify-center gap-9;
+}
+
+.step-item {
+  @apply flex gap-5 w-5/6 md:w-1/3 mx-auto;
+}
+
+.step-number {
+  @apply grid place-content-center bg-[#FF57334D] rounded-full text-[16px] font-bold w-[30px] h-[30px];
+}
+
+.step-title {
+  @apply text-lg font-bold;
+}
+
+.step-text {
+  @apply font-medium
 }

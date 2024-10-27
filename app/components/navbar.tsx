@@ -4,12 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { stepsConfig, Step } from "./stepsConfig";
+import styles from "./navbar.module.css";
+import Logo from "../assets/Logo";
+import avatar from "../assets/avatar-placeholder.png";
 import IconCheckmark from "../assets/icons/IconCheckmark";
 import IconCompletedLine from "../assets/icons/IconCompletedLine";
 import IconIncompleteLine from "../assets/icons/IconIncompleteLine";
-import Logo from "../assets/Logo";
 import IconSquares from "../assets/icons/IconSquares";
-import avatar from '../assets/avatar-placeholder.png';
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
@@ -23,37 +24,35 @@ const Navbar: React.FC = () => {
   );
 
   return (
-    <nav className="flex justify-between items-center w-full bg-inherit px-7 md:px-14 lg:px-28 py-3 mt-6 fixed">
-      <div className="flex items-center">
+    <nav className={styles.navbar}>
+      <div className={styles.logoContainer}>
         <Link href="/">
           <Logo />
         </Link>
       </div>
 
       {isProcessPage && (
-        <div className="flex items-center space-x-4">
+        <div className={styles.stepsContainer}>
           {stepsConfig.map((step: Step, index: number) => (
-            <div key={step.label} className="flex items-center space-x-2">
+            <div key={step.label} className={styles.stepItem}>
               <div
-                className={`flex items-center ps-1 pe-3 py-1 rounded-full text-xs font-bold ${
+                className={`${styles.stepBadge} ${
                   index < currentStepIndex
-                    ? "bg-[#D1FAE5] text-[#10B981]"
+                    ? styles.stepBadgeCompleted
                     : index === currentStepIndex
-                    ? "bg-[#DBEAFE] text-[#334155]"
-                    : "bg-[#F8FAFC] text-[#64748B]"
+                    ? styles.stepBadgeCurrent
+                    : styles.stepBadgeIncomplete
                 }`}
               >
                 <span>
                   {index < currentStepIndex ? (
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#10B981]">
+                    <span className={styles.iconCheckmark}>
                       <IconCheckmark />
                     </span>
                   ) : index === currentStepIndex ? (
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#3B82F6] text-white">
-                      {index + 1}
-                    </span>
+                    <span className={styles.iconCurrentStep}>{index + 1}</span>
                   ) : (
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white text-[#94A3B8] border border-[#E2E8F0]">
+                    <span className={styles.iconIncompleteStep}>
                       {index + 1}
                     </span>
                   )}
@@ -71,11 +70,11 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
-      <div className="flex items-center space-x-4">
-        <button className="">
+      <div className={styles.stepsContainer}>
+        <button>
           <IconSquares />
         </button>
-        <div className="w-10 h-10 rounded-full overflow-hidden">
+        <div className={styles.avatarContainer}>
           <img
             src={avatar.src}
             alt="User Avatar"
