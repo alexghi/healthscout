@@ -1,8 +1,5 @@
 # HealthScout Assistant
 
-How to start the app
-![OpenAI Assistants API Quickstart](https://github.com/openai/openai-assistants-quickstart/assets/27232/755e85e9-3ea4-421f-b202-3b0c435ea270)
-
 ## Quickstart
 ### 1. Install dependencies
 
@@ -46,7 +43,23 @@ AI-powered matching engine: Uses machine learning to match patients with the mos
 
 ### Cost Estimation
 
-
 - **Private medical system cost calculator**: Allows patients to receive a preliminary cost estimate for referrals to private healthcare services.
 
 - **Insurance compatibility check**: Assesses whether suggested referrals are covered under the patient’s insurance plan.
+  
+### User Flows
+#### Patient Experience
+
+- Patient registers, completes their profile, and uploads relevant medical records. (optional to some point)
+- Receives a recommended referral pathway for their condition and schedules an appointment with a specialist. 
+- Tracks referral progress and receives notifications on email, phone etc for upcoming appointments, reminders, and follow-up recommendations.
+
+### Upcoming Challenges
+**Data privacy and security**: Ensuring compliance with international data protection standards, especially for sensitive patient data.
+
+**Model accuracy**: Building and continuously improving the AI model to accurately match patients with specialists.
+
+**Integration with existing systems**: Ensuring seamless data flow and compatibility with electronic health record (EHR) systems.
+
+
+Goal here is to reduce administrative loads, and make specialist care more accessible for chronic patients, ultimately improving health outcomes across the system.
