@@ -13,6 +13,13 @@ const getDoctors = () => {
           { date: "2024-10-31", time: "11:00 AM" },
           { date: "2024-11-02", time: "1:00 PM" },
         ],
+        consultancy_price: 180,
+        supported_healthcare_plans: [
+          "BlueCross BlueShield",
+          "UnitedHealthcare",
+          "Aetna",
+          "Cigna",
+        ],
       },
       {
         name: "Dr. James Wilson",
@@ -25,6 +32,13 @@ const getDoctors = () => {
           { date: "2024-10-29", time: "10:00 AM" },
           { date: "2024-10-31", time: "11:00 AM" },
           { date: "2024-11-02", time: "1:00 PM" },
+        ],
+        consultancy_price: 160,
+        supported_healthcare_plans: [
+          "Kaiser Permanente",
+          "Health Net",
+          "Blue Shield of California",
+          "UnitedHealthcare",
         ],
       },
       {
@@ -39,6 +53,13 @@ const getDoctors = () => {
           { date: "2024-10-31", time: "11:00 AM" },
           { date: "2024-11-02", time: "1:00 PM" },
         ],
+        consultancy_price: 190,
+        supported_healthcare_plans: [
+          "Humana",
+          "BlueCross BlueShield",
+          "Medicaid",
+          "UnitedHealthcare",
+        ],
       },
       {
         name: "Dr. Michael Johnson",
@@ -51,6 +72,13 @@ const getDoctors = () => {
           { date: "2024-10-29", time: "10:00 AM" },
           { date: "2024-10-31", time: "11:00 AM" },
           { date: "2024-11-02", time: "1:00 PM" },
+        ],
+        consultancy_price: 140,
+        supported_healthcare_plans: [
+          "Cigna",
+          "Aetna",
+          "BlueCross BlueShield",
+          "Ambetter",
         ],
       },
       {
@@ -65,6 +93,13 @@ const getDoctors = () => {
           { date: "2024-10-31", time: "11:00 AM" },
           { date: "2024-11-02", time: "1:00 PM" },
         ],
+        consultancy_price: 170,
+        supported_healthcare_plans: [
+          "Banner Health",
+          "Cigna",
+          "Medicare",
+          "Aetna",
+        ],
       },
       {
         name: "Dr. Hannah Kim",
@@ -77,6 +112,13 @@ const getDoctors = () => {
           { date: "2024-10-30", time: "9:00 AM" },
           { date: "2024-11-01", time: "2:00 PM" },
           { date: "2024-11-03", time: "10:30 AM" },
+        ],
+        consultancy_price: 150,
+        supported_healthcare_plans: [
+          "Medi-Cal",
+          "Blue Shield of California",
+          "UnitedHealthcare",
+          "Humana",
         ],
       },
       {
@@ -91,6 +133,13 @@ const getDoctors = () => {
           { date: "2024-11-01", time: "3:00 PM" },
           { date: "2024-11-04", time: "11:30 AM" },
         ],
+        consultancy_price: 160,
+        supported_healthcare_plans: [
+          "Florida Blue",
+          "UnitedHealthcare",
+          "Humana",
+          "Cigna",
+        ],
       },
       {
         name: "Dr. William Patel",
@@ -103,6 +152,13 @@ const getDoctors = () => {
           { date: "2024-10-30", time: "11:00 AM" },
           { date: "2024-11-02", time: "9:00 AM" },
           { date: "2024-11-05", time: "2:30 PM" },
+        ],
+        consultancy_price: 180,
+        supported_healthcare_plans: [
+          "Regence BlueShield",
+          "Premera Blue Cross",
+          "UnitedHealthcare",
+          "Aetna",
         ],
       },
       {
@@ -117,6 +173,13 @@ const getDoctors = () => {
           { date: "2024-11-01", time: "10:00 AM" },
           { date: "2024-11-03", time: "3:00 PM" },
         ],
+        consultancy_price: 170,
+        supported_healthcare_plans: [
+          "BlueCross BlueShield of Massachusetts",
+          "Harvard Pilgrim Health Care",
+          "Tufts Health Plan",
+          "UnitedHealthcare",
+        ],
       },
       {
         name: "Dr. Sophia Green",
@@ -129,6 +192,13 @@ const getDoctors = () => {
           { date: "2024-10-29", time: "2:00 PM" },
           { date: "2024-11-01", time: "1:00 PM" },
           { date: "2024-11-04", time: "9:30 AM" },
+        ],
+        consultancy_price: 180,
+        supported_healthcare_plans: [
+          "Independence Blue Cross",
+          "Aetna",
+          "Cigna",
+          "UnitedHealthcare",
         ],
       },
     ],
